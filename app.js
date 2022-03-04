@@ -69,6 +69,7 @@ async function loadQuestions(questionsFile) {
 
 async function getQuestionsFields() {
   questions = await loadQuestions("questions.json");
+  console.log(questions);
   uniqueFields = [...new Set(questions.map((question) => question.field))];
   console.log(uniqueFields);
   ui.enableInfoBox(uniqueFields);
